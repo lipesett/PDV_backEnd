@@ -22,6 +22,7 @@ builder.Services.AddDbContext<PDVDbContext>(options => options.UseMySql(connecti
 builder.Services.AddScoped<IKartodromoRepositorio, KartodromoRepositorio>();
 builder.Services.AddScoped<IStatusRepositorio, StatusRepositorio>();
 builder.Services.AddScoped<ITemporadaRepositorio, TemporadaRepositorio>();
+builder.Services.AddScoped<ITracadoRepositorio, TracadoRepositorio>();
 
 
 var app = builder.Build();

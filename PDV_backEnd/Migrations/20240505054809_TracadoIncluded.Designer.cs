@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PDV_backEnd.Data;
 
@@ -11,9 +12,11 @@ using PDV_backEnd.Data;
 namespace PDV_backEnd.Migrations
 {
     [DbContext(typeof(PDVDbContext))]
-    partial class PDVDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240505054809_TracadoIncluded")]
+    partial class TracadoIncluded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,7 +33,7 @@ namespace PDV_backEnd.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("KAR_ID"));
 
-                    b.Property<int?>("CID_KARTODROMO")
+                    b.Property<int>("CID_KARTODROMO")
                         .HasColumnType("int");
 
                     b.Property<string>("KAR_APELIDO")

@@ -6,6 +6,6 @@
         public string? KAR_NOME { get; set; }
         public string? KAR_NOMECURTO { get; set; }
         public string? KAR_APELIDO { get; set; }
-        public int CID_KARTODROMO { get; set; }
+        public int? CID_KARTODROMO { get; set; }
     }
 }
